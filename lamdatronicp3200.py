@@ -59,7 +59,7 @@ class LamdatronicP3200Touch:
 	##Read the outside temperature
 	#@return temperature as float
 	def get_outside_temperatur(self):
-		return self.instrument.read_register(1000, numberOfDecimals=0, functioncode=4, signed=False)/2.0
+		return self.instrument.read_register(1000, numberOfDecimals=0, functioncode=4, signed=True)/2.0
 	
 	##Reads the current preflow temperature of given heating circuit
 	#@param hk Number of heating circuit (1...18)
